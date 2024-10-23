@@ -16,9 +16,21 @@ public class MakeList {
     }}
         return itog;
     }
+    public List<Integer> indeksyChisel(){
+        List<Integer> indeksy = new ArrayList<>();
+        for (int i = 0; i < numbers.size(); i++) {
+            if(numbers.get(i)>znachenie){//если значение итого индекса больше заданного числа
+                indeksy.add(i); //добавляем индекс в список нового листа
+    }
+    }   return indeksy;
+    }
+
+
+
     @Override
     public String toString() {
         return "Список чисел, которые больше " +
-                znachenie +": " + naitiZnachenia();
+                znachenie +": " + naitiZnachenia() + "\n" +
+                "Индексы этих чисел: " + indeksyChisel(); //чтобы сразу все выводило добавили
     }
 }
